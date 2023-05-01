@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "352542074835",
+    "project_id": "edux-13341",
+    "storage_bucket": "edux-13341.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352542074835:android:e09d7f6efaffabaf5d3126",
+        "android_client_info": {
+          "package_name": "com.ck.tutorialxv1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352542074835-o9h9fbgq2t4i9v3m9b0toegva9s9iki8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3oqEGj6ta4iuWC6dSSk8inGxyrb64Sek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352542074835-o9h9fbgq2t4i9v3m9b0toegva9s9iki8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

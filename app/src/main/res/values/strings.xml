@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">TutorialXv1</string>
+    <string name="login">Login</string>
+    <string name="password">password</string>
+    <string name="email">email</string>
+    <string name="login2">Login</string>
+    <string name="register">Register</string>
+    <string name="register2">Register</string>
+    <string name="repassword">repassword</string>
+    <string name="not_registered_yet_signup">not registered yet? signup</string>
+    <string name="grade">grade</string>
+    <string name="zoom_link">Zoom Link</string>
+    <string name="subject">subject</string>
+    <string name="time">Time</string>
+    <string name="date">Date</string>
+    <string name="add_class">Add class</string>
+
+</resources>
