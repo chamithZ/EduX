@@ -10,37 +10,55 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Material3.Light">
+        android:theme="@style/Theme.Material3.Light.NoActionBar">
         <activity
-            android:name=".activities.FetchingCourse"
-            android:exported="false" />
-        <activity
-            android:name=".activities.CourseFetch"
-            android:exported="false" />
-        <activity
-            android:name=".activities.AddClass"
-            android:exported="false" />
-        <activity
-            android:name=".activities.login"
-            android:exported="false"
-            android:theme="@style/Theme.Material3.Dark.NoActionBar">
-
-        </activity>
-        <activity
-            android:name=".activities.register"
-            android:exported="false"
-            android:theme="@style/Theme.Material3.Dark.NoActionBar" />
-        <activity
-            android:name=".activities.MainActivity"
+            android:name=".activities.chamith.SignView"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.chamith.StudentHome"
+            android:exported="false"
+            android:label="@string/title_activity_student_home"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".activities.teacherRegister"
+            android:exported="false"></activity>
+        <activity
+            android:name=".activities.teacherAccount"
+            android:exported="false" />
+        <activity
+            android:name=".activities.chamith.CourseDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.chamith.FetchingCourse"
+            android:exported="false" />
+        <activity
+            android:name=".activities.chamith.FetchingAllCourse"
+            android:exported="false" />
+        <activity
+            android:name=".activities.chamith.CourseFetch"
+            android:exported="false" />
+        <activity
+            android:name=".activities.chamith.AddClass"
+            android:exported="false" />
+        <activity
+            android:name=".activities.chamith.login"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar">
 
         </activity>
-
+        <activity
+            android:name=".activities.register"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+        <activity
+            android:name=".activities.chamith.MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

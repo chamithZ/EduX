@@ -1,0 +1,44 @@
+package com.ck.tutorialxv1.activities.chamith
+
+import android.content.Intent
+import android.content.SharedPreferences
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.ck.tutorialxv1.R
+import com.ck.tutorialxv1.activities.teacherAccount
+import com.ck.tutorialxv1.databinding.ActivityMainBinding
+
+class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var sharedPreferences: SharedPreferences
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+
+        binding.addclass.setOnClickListener {
+            val intent = Intent(this, AddClass::class.java)
+            startActivity(intent)
+        }
+
+        binding.textView8.setOnClickListener {
+            val intent = Intent(this, FetchingCourse::class.java)
+            startActivity(intent)
+        }
+        binding.account .setOnClickListener {
+            val intent = Intent(this, teacherAccount::class.java)
+            startActivity(intent)
+        }
+
+        val userName = sharedPreferences.getString("name","")
+
+        System.out.println(userName)
+
+        if (!userName.isNullOrEmpty()) {
+            binding.userName.text = "  $userName!"
+        }
+    }
+}

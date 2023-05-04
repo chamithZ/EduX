@@ -6,37 +6,166 @@
     android:layout_height="match_parent"
     >
 
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="415dp"
+        android:layout_height="276dp"
+        android:layout_marginBottom="61dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.138"
+        app:srcCompat="@mipmap/ic_launcher_top_bg_foreground" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="347dp"
+        android:layout_height="358dp"
+        android:layout_marginBottom="44dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="32dp">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="280dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="16sp"
+            android:layout_marginRight="30sp"
+            android:background="@drawable/btn2"
+
+            android:paddingStart="5sp"
+            android:paddingTop="8sp"
+            android:text="Your classes"
+            android:textAlignment="center"
+            android:textColor="@color/Pcolor"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/addclass"
+            android:layout_width="280dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="16sp"
+            android:layout_marginRight="30sp"
+            android:background="@drawable/btn2"
+
+            android:paddingStart="5sp"
+            android:paddingTop="8sp"
+            android:text="Add class"
+            android:textAlignment="center"
+            android:textColor="@color/Pcolor"
+            android:textSize="24sp" />
+
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="281dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="16sp"
+            android:layout_marginRight="30sp"
+            android:background="@drawable/btn2"
+
+            android:paddingStart="5sp"
+            android:paddingTop="5sp"
+            android:text="Add quiz"
+            android:textAlignment="center"
+            android:textColor="@color/Pcolor"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="281dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="16sp"
+            android:layout_marginRight="30sp"
+            android:background="@drawable/btn2"
+
+            android:paddingStart="5sp"
+            android:paddingTop="8sp"
+            android:text="Add blog post"
+            android:textAlignment="center"
+            android:textColor="@color/Pcolor"
+            android:textSize="24sp" />
+
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="281dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="16sp"
+            android:layout_marginRight="30sp"
+            android:background="@drawable/btn2"
+
+            android:paddingStart="5sp"
+            android:paddingTop="8sp"
+            android:text="Your progress"
+            android:textAlignment="center"
+            android:textColor="@color/Pcolor"
+            android:textSize="24sp" />
+        <TextView
+            android:id="@+id/account"
+            android:layout_width="280dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="16sp"
+            android:layout_marginRight="30sp"
+            android:background="@drawable/btn2"
+
+            android:paddingStart="5sp"
+            android:paddingTop="8sp"
+            android:text="Your account"
+            android:textAlignment="center"
+            android:textColor="@color/Pcolor"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Firebase Realtime Database App in Kotlin"
-        android:layout_marginTop="80dp"
-        android:textSize="28sp"
-        android:gravity="center"
+        android:layout_marginBottom="68dp"
+        android:text="Have a great day"
+        android:textColor="@color/pgrey"
+        android:textSize="25sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        app:layout_constraintEnd_toStartOf="@+id/user_name"
+        app:layout_constraintHorizontal_bias="0.794"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="180dp"
+        android:layout_height="173dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:srcCompat="@drawable/ic_launcher_teach_home" />
 
-    <Button
-        android:id="@+id/btnInsertData"
+    <TextView
+        android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="insert Data"
-        android:layout_marginTop="75dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="70dp"
+        android:text=""
+        android:textColor="@color/pgrey"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
-    <Button
-        android:id="@+id/btnFetchData"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
-        android:text="Fetch Data"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnInsertData" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

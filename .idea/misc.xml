@@ -3,13 +3,31 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/layout/activity_add_class.xml" value="0.13545816733067728" />
-        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/layout/activity_course_fetch.xml" value="0.13385416666666666" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2555" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/drawable/all_rounded_corner.xml" value="0.1775" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/drawable/btn1.xml" value="0.1" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/drawable/btn2.xml" value="0.1" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/drawable/btn3.xml" value="0.1775" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2555" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/drawable/ic_launcher_learn_background.xml" value="0.2555" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/drawable/ic_launcher_learn_foreground.xml" value="0.2555" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/drawable/ic_launcher_top_bg_background.xml" value="0.2555" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/layout/activity_add_class.xml" value="0.176" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/layout/activity_course_details.xml" value="0.264" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/layout/activity_course_fetch.xml" value="0.264" />
         <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/layout/activity_fetching_course.xml" value="0.1734375" />
         <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/layout/activity_main.xml" value="0.1734375" />
-        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/layout/activity_register.xml" value="0.10989583333333333" />
-        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/layout/courselist.xml" value="0.1734375" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/layout/activity_register.xml" value="0.2" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/layout/activity_sign_view.xml" value="0.2" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/layout/activity_student_home.xml" value="0.23425925925925925" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/layout/activity_teacher_account.xml" value="0.25" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/layout/activity_teacher_home.xml" value="0.16" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/layout/activity_teacher_register.xml" value="0.21875" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/layout/activity_update_class.xml" value="0.264" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/layout/content_student_home.xml" value="0.12395833333333334" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/layout/courselist.xml" value="0.1897810218978102" />
+        <entry key="..\:/Users/Chamith/AndroidStudioProjects/TutorialXv1/app/src/main/res/layout/sign_in.xml" value="0.2" />
       </map>
     </option>
   </component>
@@ -18,5 +36,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.264" />
+      </ProjectState>
+    </option>
   </component>
 </project>

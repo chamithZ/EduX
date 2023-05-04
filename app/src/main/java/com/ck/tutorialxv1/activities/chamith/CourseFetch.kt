@@ -1,4 +1,4 @@
-package com.ck.tutorialxv1.activities
+package com.ck.tutorialxv1.activities.chamith
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

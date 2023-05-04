@@ -1,4 +1,4 @@
-package com.ck.tutorialxv1.activities
+package com.ck.tutorialxv1.activities.chamith
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.widget.Toast
 import com.ck.tutorialxv1.R
 import com.ck.tutorialxv1.models.courseModel
 import com.ck.tutorialxv1.databinding.ActivityAddClassBinding
+import com.google.firebase.auth.FirebaseAuth
 
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -25,53 +26,52 @@ class AddClass : AppCompatActivity() {
         binding = ActivityAddClassBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnAddClass.setOnClickListener{
+        binding.addClass.setOnClickListener{
             saveClassData()
         }
     }
 
     private fun saveClassData(){
-        val grade = binding.grade.text.toString()
-        val zoomLink = binding.zoomLink.text.toString()
-        val subject = binding.subject.text.toString()
-        val date = binding.date.text.toString()
-        val time = binding.time.text.toString()
+        val grade = binding.gradeTV .text.toString()
+        val zoomLink = binding.ZoomLinkTv .text.toString()
+        val subject = binding.subjectTv .text.toString()
+        val date = binding.dateTv .text.toString()
+        val time = binding.timeTv .text.toString()
 
         if(subject.isEmpty()){
-            binding.subject.error="Please enter the subject"
+            binding.subjectTv.error="Please enter the subject"
         }
         if(grade.isEmpty()){
-            binding.grade.error="Please enter the grade"
+            binding.gradeTV.error="Please enter the grade"
         }
         if(zoomLink.isEmpty()){
-            binding.zoomLink.error="Please enter the zoom link"
+            binding.ZoomLinkTv.error="Please enter the zoom link"
         }
         if(date.isEmpty()){
-            binding.date.error="Please enter the date"
+            binding.dateTv.error="Please enter the date"
         }
         if(time.isEmpty()){
-            binding.time.error="Please enter the time"
+            binding.timeTv.error="Please enter the time"
         }
         val courseId=db.push().key!!
 
-        val course= courseModel(subject,grade, zoomLink, date, time)
+        val course= courseModel(courseId,subject,grade, zoomLink, date, time, getUserId())
 
         db.child(courseId).setValue(course)
             .addOnCompleteListener{
                 Toast.makeText(this,"Data inserted sycessfully",Toast.LENGTH_LONG).show()
-                binding.subject.setText("")
-                binding.grade.setText("")
-                binding.zoomLink.setText("")
-                binding.date.setText("")
-                binding.time.setText("")
-
-
+                binding.subjectTv.setText("")
+                binding.gradeTV.setText("")
+                binding.ZoomLinkTv.setText("")
+                binding.dateTv.setText("")
+                binding.timeTv.setText("")
             }.addOnFailureListener { err->
                 Toast.makeText(this,"Error ${err.message}",Toast.LENGTH_LONG).show()
             }
+    }
 
-
-
-
+    private fun getUserId(): String {
+        val userId = FirebaseAuth.getInstance().currentUser?.uid
+        return userId ?: ""
     }
 }
