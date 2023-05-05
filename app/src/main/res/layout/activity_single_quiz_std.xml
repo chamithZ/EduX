@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.sehan.SingleQuizStd">
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="435dp"
+        android:layout_height="326dp"
+        android:scaleType="centerCrop"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="173dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/single_quiz1" />
+
+    <TextView
+        android:id="@+id/Quest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="153dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="154dp"
+        android:fontFamily="@font/oswald"
+        android:textColor="#D8DDE2"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Question" />
+
+    <TextView
+        android:id="@+id/viewQuestion"
+        android:layout_width="397dp"
+        android:layout_height="124dp"
+        android:layout_margin="20sp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif"
+        android:padding="30sp"
+        android:text="Ques"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/register_button"
+        android:text="@string/Next"
+        android:textColor="#FEFEFE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option02" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/register_button"
+        android:text="@string/PREVIOUS"
+        android:textColor="#FEFEFE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option02" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corners"
+        app:itemIconTint="#ffff"
+        app:itemTextColor="#ffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <Button
+        android:id="@+id/Option01"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="Option 01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+    <Button
+        android:id="@+id/option03"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="17dp"
+        android:text="Option 02"
+        app:layout_constraintEnd_toEndOf="@+id/option02"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/option02"
+        app:layout_constraintTop_toBottomOf="@+id/Option01" />
+
+    <Button
+        android:id="@+id/option04"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="19dp"
+        android:text="Option 03"
+        app:layout_constraintEnd_toEndOf="@+id/option03"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/option03"
+        app:layout_constraintTop_toBottomOf="@+id/option03" />
+
+    <Button
+        android:id="@+id/option02"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="21dp"
+        android:text="Option 04"
+        app:layout_constraintEnd_toEndOf="@+id/Option01"
+        app:layout_constraintTop_toBottomOf="@+id/option04" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
