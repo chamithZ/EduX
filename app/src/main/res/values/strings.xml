@@ -24,4 +24,35 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
+
+    <string name="get_started">Get Started</string>
+    <string name="getStarted2">As a teacher, you can use EduX to share your knowledge and expertise with students who are eager to learn.</string>
+    <string name="GetStarted">Welcome to EduX, the ultimate learning platform for students in Sri Lanka! Here, you can access free courses and borrow books from generous donors who want to help you succeed.</string>
+    <string name="getStarted3">As a donor, you can use EduX to give back to your community by sharing your unused books with students who need them</string>
+    <string name="AddQuizInfo">Quiz Informations</string>
+    <string name="QuizName">Enter Quiz name</string>
+    <string name="NoOfQuestions">Enter No.of Questions</string>
+    <string name="GradeQuiz">Enter Grade</string>
+    <string name="Course">Enter Course</string>
+    <string name="CreateQuiz">Create Quiz</string>
+    <string name="Quesion1">Question 04</string>
+    <string name="Question">printf(\"%.2f,\",3.1235) what is the Output of this statement</string>
+    <string name="mcq1">0</string>
+    <string name="Next">NEXT</string>
+    <string name="PREVIOUS">PREVIOUS</string>
+    <string name="Results">Results</string>
+    <string name="marks">Your Marks is 70%</string>
+    <string name="FinishQuiz">Exit</string>
+    <string name="donateH1">Donate Books Info </string>
+    <string name="BookTitle">Enter Book Title</string>
+    <string name="_10_questions">10 Questions</string>
+    <string name="show">Show</string>
+    <string name="grade_11_maths">Grade11 Maths</string>
+    <string name="add_quizes">Add Quizes</string>
+    <string name="_15_questions">15 Questions</string>
+    <string name="quizes1">Quizes 01</string>
+    <string name="garde_7_maths">Grade 7 maths</string>
+    <string name="title_activity_update_dialog">updateDialog</string>
+
+
 </resources>

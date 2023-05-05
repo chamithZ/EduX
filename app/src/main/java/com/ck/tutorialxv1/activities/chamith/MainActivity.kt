@@ -5,6 +5,8 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ck.tutorialxv1.R
+import com.ck.tutorialxv1.activities.sehan.Add_Quiz_Info
+import com.ck.tutorialxv1.activities.sehan.ViewAllQuiz
 import com.ck.tutorialxv1.activities.teacherAccount
 import com.ck.tutorialxv1.databinding.ActivityMainBinding
 
@@ -30,6 +32,14 @@ class MainActivity : AppCompatActivity() {
         }
         binding.account .setOnClickListener {
             val intent = Intent(this, teacherAccount::class.java)
+            startActivity(intent)
+        }
+        binding.textView12.setOnClickListener {
+            val intent = Intent(this,Add_Quiz_Info::class.java)
+            startActivity(intent)
+        }
+        binding.showQuizes.setOnClickListener {
+            val intent = Intent(this,ViewAllQuiz::class.java)
             startActivity(intent)
         }
 
