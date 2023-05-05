@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.ck.tutorialxv1.StdCourseOverview
 import com.ck.tutorialxv1.adapter.chamith.CourseAdapter
 import com.ck.tutorialxv1.databinding.ActivityCourseFetchBinding
 import com.ck.tutorialxv1.models.courseModel
@@ -61,7 +62,7 @@ class FetchingAllCourse : AppCompatActivity() {
 
                             val intent = Intent(
                                 this@FetchingAllCourse,
-                                CourseDetailsActivity::class.java
+                                StdCourseOverview::class.java
                             )
                             intent.putExtra("courseId", courseList[position].courseId)
                             intent.putExtra("subject", courseList[position].subject)

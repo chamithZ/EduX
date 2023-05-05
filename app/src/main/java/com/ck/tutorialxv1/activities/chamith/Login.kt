@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import com.ck.tutorialxv1.R
@@ -30,15 +31,25 @@ class login : AppCompatActivity() {
         sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
 
         binding.textView4.setOnClickListener {
-            val intent= Intent(this, register::class.java)
+            val intent= Intent(this, SignView ::class.java)
             startActivity(intent)
         }
 
         if (sharedPreferences.getBoolean("isLoggedIn", false)) {
             // If the user is already logged in, navigate to MainActivity
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
+            val grade = sharedPreferences.getString("grade", null)
+                if(grade==null){
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+                else{
+                    val intent = Intent(this, StudentHome::class.java)
+                    startActivity(intent)
+                    finish()
+
+                }
+
         }
 
         binding.login2.setOnClickListener{
@@ -53,51 +64,56 @@ class login : AppCompatActivity() {
                     if (it.isSuccessful) {
                         val userId = firebaseAuth.currentUser!!.uid
 
-                        // Retrieve user details from the database
-                        val database = FirebaseDatabase.getInstance()
-                        val ref = database.getReference("users/$userId")
-                        ref.get().addOnSuccessListener { dataSnapshot ->
-                            val user = dataSnapshot.getValue(UserModel::class.java)
 
-                            // Save user data and login status to SharedPreferences
-                            if(user?.grade==null){
-                                val editor = sharedPreferences.edit()
-                                editor.putString("userId", userId)
-                                editor.putString("email", email)
-                                editor.putString("name", user?.name)
-                                editor.putString("contactNum", user?.contactNum)
-                                editor.putString("age", user?.age)
-                                editor.putString("bankAc", user?.bankAc)
-                                editor.putString("branch", user?.branch)
-                                editor.putString("qualification", user?.qualification)
-                                editor.putBoolean("isLoggedIn", true)
-                                editor.apply()
 
-                                val intent = Intent(this, MainActivity::class.java)
-                                startActivity(intent)
-                                finish()
+                            // Retrieve user details from the database
+                            val database = FirebaseDatabase.getInstance()
+                            val ref = database.getReference("users/$userId")
+                            ref.get().addOnSuccessListener { dataSnapshot ->
+                                val user = dataSnapshot.getValue(UserModel::class.java)
 
+
+
+
+                                // Save user data and login status to SharedPreferences
+                                if (user?.grade == null) {
+                                    // User is a teacher
+                                    val editor = sharedPreferences.edit()
+                                    editor.putString("userId", userId)
+                                    editor.putString("email", email)
+                                    editor.putString("name", user?.name)
+                                    editor.putString("contactNum", user?.contactNum)
+                                    editor.putString("age", user?.age)
+                                    editor.putString("bankAc", user?.bankAc)
+                                    editor.putString("branch", user?.branch)
+                                    editor.putString("qualification", user?.qualification)
+                                    editor.putBoolean("isLoggedIn", true)
+                                    editor.apply()
+
+                                    val intent = Intent(this, MainActivity::class.java)
+                                    startActivity(intent)
+                                    finish()
+                                } else {
+                                    // User is a student
+                                    val editor = sharedPreferences.edit()
+                                    editor.putString("userId", userId)
+                                    editor.putString("email", email)
+                                    editor.putString("name", user?.name)
+                                    editor.putString("contactNum", user?.contactNum)
+                                    editor.putString("age", user?.age)
+                                    editor.putString("grade", user?.grade)
+                                    editor.putBoolean("isLoggedIn", true)
+                                    editor.apply()
+
+                                    val intent = Intent(this, StudentHome::class.java)
+                                    startActivity(intent)
+                                    finish()
+                                }
+                            }.addOnFailureListener {
+                                Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
                             }
-                            else{
-                                val editor = sharedPreferences.edit()
-                                editor.putString("userId", userId)
-                                editor.putString("email", email)
-                                editor.putString("name", user?.name)
-                                editor.putString("contactNum", user?.contactNum)
-                                editor.putString("age", user?.age)
-                                editor.putString("grade", user?.grade)
-                                editor.putBoolean("isLoggedIn", true)
-                                editor.apply()
 
-                                val intent = Intent(this, StudentHome::class.java)
-                                startActivity(intent)
-                                finish()
 
-                            }
-
-                        }.addOnFailureListener {
-                            Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
-                        }
                     } else {
                         Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
 

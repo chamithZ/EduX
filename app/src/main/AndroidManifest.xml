@@ -12,22 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Material3.Light.NoActionBar">
         <activity
+            android:name=".StdCourseOverview"
+            android:exported="false" />
+        <activity
+            android:name=".stdCourses"
+            android:exported="false" />
+        <activity
             android:name=".activities.chamith.SignView"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".activities.chamith.StudentHome"
-            android:exported="false"
-            android:label="@string/title_activity_student_home"
-            android:theme="@style/NoActionBar" />
+            android:exported="false" />
         <activity
             android:name=".activities.teacherRegister"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".activities.teacherAccount"
             android:exported="false" />
@@ -48,9 +46,13 @@
             android:exported="false" />
         <activity
             android:name=".activities.chamith.login"
-            android:exported="false"
+            android:exported="true"
             android:theme="@style/Theme.Material3.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".activities.register"

@@ -7,6 +7,7 @@ import android.os.Bundle
 import com.ck.tutorialxv1.R
 import com.ck.tutorialxv1.activities.teacherAccount
 import com.ck.tutorialxv1.databinding.ActivityStudentHomeBinding
+import java.util.*
 
 class StudentHome : AppCompatActivity() {
     private lateinit var binding: ActivityStudentHomeBinding
@@ -38,7 +39,17 @@ class StudentHome : AppCompatActivity() {
         System.out.println(userName)
 
         if (!userName.isNullOrEmpty()) {
-            binding.userName.text = "  $userName!"
+            val currentTime =
+                Calendar.getInstance().apply { timeInMillis = System.currentTimeMillis() }
+            val currentHour = currentTime.get(Calendar.HOUR_OF_DAY)
+
+            val greeting = when (currentHour) {
+                in 6..11 -> "Good morning,"
+                in 12..16 -> "Good afternoon,"
+                else -> "Good evening,"
+            }
+
+            binding.userName.text = " $greeting $userName!"
         }
     }
 }
