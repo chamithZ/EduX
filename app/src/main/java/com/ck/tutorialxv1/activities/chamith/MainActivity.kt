@@ -45,6 +45,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val userName = sharedPreferences.getString("name", "")
+        System.out.println(userName)
         if (!userName.isNullOrEmpty()) {
             val currentTime =
                 Calendar.getInstance().apply { timeInMillis = System.currentTimeMillis() }
@@ -56,7 +57,7 @@ class MainActivity : AppCompatActivity() {
                 else -> "Good evening,"
             }
 
-            binding.userName.text = " $greeting $userName!"
+            binding.userName .text = " $greeting $userName!"
         }
     }
 }

@@ -42,7 +42,7 @@ class teacherRegister : AppCompatActivity() {
                     if (pass == repass) {
                         firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener{
                             if(it.isSuccessful) {
-                                val user = UserModel(name, email, contactNum, age, qualification,bankAc,branch)
+                                val user = UserModel(name, email, contactNum, age,null,qualification,bankAc,branch)
                                 FirebaseDatabase.getInstance().reference.child("users").child(firebaseAuth.currentUser?.uid ?: "")
                                     .setValue(user)
                                 val intent = Intent(this, login::class.java)

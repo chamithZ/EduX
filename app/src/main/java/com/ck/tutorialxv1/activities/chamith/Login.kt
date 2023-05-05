@@ -31,7 +31,7 @@ class login : AppCompatActivity() {
         sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
 
         binding.textView4.setOnClickListener {
-            val intent= Intent(this, SignView ::class.java)
+            val intent= Intent(this, SignView::class.java)
             startActivity(intent)
         }
 
@@ -39,11 +39,13 @@ class login : AppCompatActivity() {
             // If the user is already logged in, navigate to MainActivity
             val grade = sharedPreferences.getString("grade", null)
                 if(grade==null){
+                    System.out.println("tewahcerrrrrr")
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                     finish()
                 }
                 else{
+                    System.out.println("Studenttttttt")
                     val intent = Intent(this, StudentHome::class.java)
                     startActivity(intent)
                     finish()
@@ -78,6 +80,7 @@ class login : AppCompatActivity() {
                                 // Save user data and login status to SharedPreferences
                                 if (user?.grade == null) {
                                     // User is a teacher
+                                    System.out.println("tewahcerrrrrr")
                                     val editor = sharedPreferences.edit()
                                     editor.putString("userId", userId)
                                     editor.putString("email", email)
@@ -94,6 +97,7 @@ class login : AppCompatActivity() {
                                     startActivity(intent)
                                     finish()
                                 } else {
+                                    System.out.println("studentttt"+user?.grade)
                                     // User is a student
                                     val editor = sharedPreferences.edit()
                                     editor.putString("userId", userId)
