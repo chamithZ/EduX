@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ck.tutorialxv1.R
+import com.ck.tutorialxv1.activities.sehan.ViewAllQuiz
 import com.ck.tutorialxv1.activities.teacherAccount
 import com.ck.tutorialxv1.databinding.ActivityStudentHomeBinding
 
@@ -25,7 +26,7 @@ class StudentHome : AppCompatActivity() {
         }
 
         binding.viewQuizzes .setOnClickListener {
-            val intent = Intent(this, FetchingAllCourse::class.java)
+            val intent = Intent(this, ViewAllQuiz::class.java)
             startActivity(intent)
         }
         binding.Saccount .setOnClickListener {

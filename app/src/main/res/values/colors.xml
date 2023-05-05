@@ -17,4 +17,12 @@
     <color name="fontBlue1">#30298F</color>
 
 
+
+    <color name="Inputs">#80ffffff</color>
+    <color name="InputFiels">#C4E0E0E0</color>
+    <color name="warning">#FFC80E0E</color>
+    <color name="p_grey">#E4261ABF</color>
+
+
+
 </resources>
