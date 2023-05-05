@@ -13,6 +13,10 @@
         android:theme="@style/Theme.Material3.Light.NoActionBar">
 
         <activity
+            android:name=".activities.chamith.SignView"
+            android:exported="false" />
+
+        <activity
             android:name=".activities.sehan.ViewAllQuiz"
             android:exported="false" />
         <activity
@@ -21,9 +25,7 @@
 
         <activity
             android:name=".activities.chamith.StudentHome"
-            android:exported="false"
-            android:label="@string/title_activity_student_home"
-            android:theme="@style/NoActionBar" />
+            android:exported="false" />
         <activity
             android:name=".activities.teacherRegister"
             android:exported="false" />
