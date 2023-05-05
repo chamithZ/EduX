@@ -22,12 +22,13 @@
 
     <LinearLayout
         android:id="@+id/linearLayout5"
-        android:layout_width="347dp"
-        android:layout_height="358dp"
-        android:layout_marginBottom="44dp"
+        android:layout_width="355dp"
+        android:layout_height="442dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="4dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="32dp">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/textView8"
@@ -110,6 +111,7 @@
             android:textAlignment="center"
             android:textColor="@color/Pcolor"
             android:textSize="24sp" />
+
         <TextView
             android:id="@+id/account"
             android:layout_width="280dp"
@@ -126,7 +128,37 @@
             android:textColor="@color/Pcolor"
             android:textSize="24sp" />
 
+        <TextView
+            android:id="@+id/showQuizes"
+            android:layout_width="294dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="16sp"
+            android:layout_marginRight="30sp"
+            android:background="@drawable/btn2"
+
+            android:paddingStart="5sp"
+            android:paddingTop="8sp"
+            android:text="Show Quiz"
+            android:textAlignment="center"
+            android:textColor="@color/Pcolor"
+            android:textSize="24sp" />
+
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:text="Have a great day"
+        android:textColor="@color/pgrey"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        app:layout_constraintEnd_toStartOf="@+id/user_name"
+        app:layout_constraintHorizontal_bias="0.794"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView7"

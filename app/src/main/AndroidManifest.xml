@@ -11,18 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Material3.Light.NoActionBar">
+
         <activity
-            android:name=".StdCourseOverview"
+            android:name=".activities.sehan.ViewAllQuiz"
             android:exported="false" />
         <activity
-            android:name=".stdCourses"
-            android:exported="false" />
-        <activity
-            android:name=".activities.chamith.SignView"
-            android:exported="false" />
+            android:name=".activities.sehan.ViewAllQuizStd"
+            android:exported="false"/>
+
         <activity
             android:name=".activities.chamith.StudentHome"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/title_activity_student_home"
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".activities.teacherRegister"
             android:exported="false" />
@@ -47,12 +48,13 @@
         <activity
             android:name=".activities.chamith.login"
             android:exported="true"
-            android:theme="@style/Theme.Material3.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:theme="@style/Theme.Material3.Light.NoActionBar"
+            >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
         <activity
             android:name=".activities.register"
@@ -61,6 +63,33 @@
         <activity
             android:name=".activities.chamith.MainActivity"
             android:exported="false" />
+        <!-- sehan -->
+
+
+        <activity
+            android:name=".activities.sehan.DialogQuizInfo"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".activities.sehan.View_Quiz_Details"
+            android:exported="false" />
+        <activity
+            android:name=".activities.sehan.Add_Single_Quiz"
+            android:exported="false" />
+        <activity
+            android:name=".activities.sehan.Add_Quiz_Info"
+            android:exported="false" />
+        <activity
+            android:name=".activities.sehan.LoginIntro"
+            android:exported="false">
+
+        </activity>
+
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
