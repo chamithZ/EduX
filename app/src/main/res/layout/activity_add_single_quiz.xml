@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.sehan.Add_Single_Quiz">
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="391dp"
+        android:layout_height="386dp"
+        android:background="@drawable/input_fields"
+        android:scaleType="centerCrop"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="153dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="154dp"
+        android:fontFamily="@font/oswald"
+        android:textColor="#131313"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/Quesion1" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="195dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.985"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/single_quiz1" />
+
+    <EditText
+        android:id="@+id/Question"
+        android:layout_width="389dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/input_fields"
+        android:backgroundTint="@color/InputFiels"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter Your Question "
+        android:inputType="textPersonName"
+        android:paddingBottom="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/LinearLayout01"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="@+id/LinearLayout01"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <EditText
+        android:id="@+id/correctOp"
+        android:layout_width="196dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/input_fields"
+        android:backgroundTint="@color/InputFiels"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter Correct Option "
+        android:inputType="textPersonName"
+        android:paddingBottom="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayout01" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout01"
+        android:layout_width="360dp"
+        android:layout_height="249dp"
+        android:layout_marginTop="264dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView12">
+
+        <EditText
+            android:id="@+id/op01"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginBottom="5sp"
+            android:background="@drawable/input_fields"
+            android:backgroundTint="@color/InputFiels"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Enter Option1"
+            android:inputType="textPersonName"
+            android:paddingBottom="15sp" />
+
+        <EditText
+            android:id="@+id/op02"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginBottom="5sp"
+            android:background="@drawable/input_fields"
+            android:backgroundTint="@color/InputFiels"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Enter Option2"
+            android:inputType="textPersonName"
+            android:paddingBottom="15sp" />
+
+        <EditText
+            android:id="@+id/op03"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginBottom="5sp"
+            android:background="@drawable/input_fields"
+            android:backgroundTint="@color/InputFiels"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Enter Option3"
+            android:inputType="textPersonName"
+            android:paddingBottom="15sp" />
+
+        <EditText
+            android:id="@+id/op04"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginBottom="5sp"
+            android:background="@drawable/input_fields"
+            android:backgroundTint="@color/InputFiels"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Enter Option4"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corners"
+        app:itemIconTint="#ffff"
+        app:itemTextColor="#ffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+         >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="99dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/register_button"
+        android:text="@string/Next"
+        android:textColor="#FEFEFE"
+        app:layout_constraintStart_toEndOf="@+id/correctOp"
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayout01" />
+
+    <Button
+        android:id="@+id/doneBtn"
+        android:layout_width="99dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="276dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/register_button"
+        android:text="Done"
+        android:textColor="#FEFEFE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nextBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
