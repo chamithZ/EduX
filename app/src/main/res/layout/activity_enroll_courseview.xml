@@ -10,23 +10,20 @@
         android:id="@+id/textView28"
         android:layout_width="186dp"
         android:layout_height="43dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginBottom="18dp"
+        android:layout_marginBottom="8dp"
         android:text="Course Overview"
         android:textColor="@color/fontBlue1"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.935" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout8"
         android:layout_width="359dp"
-        android:layout_height="441dp"
+        android:layout_height="384dp"
         android:layout_marginTop="29dp"
         android:background="@drawable/all_rounded_corner"
         android:orientation="vertical"
@@ -35,7 +32,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.09">
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -139,44 +136,9 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/guide"
-                android:layout_width="151dp"
-                android:layout_height="38dp"
-                android:layout_marginLeft="10sp"
-                android:text="Guide by"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-            <TextView
                 android:id="@+id/textView22"
                 android:layout_width="197dp"
                 android:layout_height="139dp"
-                android:text="TextView"
-                android:textColor="@color/fontBlue1"
-                android:textSize="20sp"
-                tools:text=" " />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="339dp"
-            android:layout_height="75dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/qualification"
-                android:layout_width="151dp"
-                android:layout_height="38dp"
-                android:layout_marginLeft="10sp"
-                android:text="Qualification"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/qText"
-                android:layout_width="173dp"
-                android:layout_height="54dp"
                 android:text="TextView"
                 android:textColor="@color/fontBlue1"
                 android:textSize="20sp"
@@ -208,12 +170,12 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="297dp"
-        android:layout_height="126dp"
+        android:layout_width="250dp"
+        android:layout_height="129dp"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="@+id/linearLayout8"
         app:srcCompat="@drawable/ic_launcher_teach_foreground"
-        tools:layout_editor_absoluteY="124dp" />
+        tools:layout_editor_absoluteY="83dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

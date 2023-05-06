@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.ck.tutorialxv1.R
+import com.ck.tutorialxv1.activities.register
 import com.ck.tutorialxv1.databinding.ActivityCourseDetailsBinding
 import com.ck.tutorialxv1.databinding.ActivityStdCourseOverviewBinding
 import com.ck.tutorialxv1.models.chamith.StdCourseModel
@@ -31,6 +32,11 @@ class StdCourseOverview : AppCompatActivity() {
         binding.enroll.setOnClickListener {
             enrollInCourse()
         }
+        binding.home3.setOnClickListener {
+            val intent = Intent(this, StudentHome::class.java)
+            startActivity(intent)
+        }
+
 
     }
 

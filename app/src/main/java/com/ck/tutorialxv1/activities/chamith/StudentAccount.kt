@@ -23,6 +23,10 @@ class StudentAccount : AppCompatActivity() {
             val intent = Intent(this, Std_progress::class.java)
             startActivity(intent)
         }
+        binding.home.setOnClickListener{
+            val intent = Intent(this, StudentHome::class.java)
+            startActivity(intent)
+        }
 
 
         binding.logout.setOnClickListener {

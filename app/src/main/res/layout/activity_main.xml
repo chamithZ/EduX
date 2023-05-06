@@ -45,7 +45,8 @@
             android:text="Your classes"
             android:textAlignment="center"
             android:textColor="@color/Pcolor"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            app:drawableStartCompat="@drawable/ic_baseline_bookmarks_24book" />
 
         <TextView
             android:id="@+id/addclass"
@@ -56,6 +57,7 @@
             android:layout_marginRight="30sp"
             android:background="@drawable/btn2"
 
+            android:drawableStart="@drawable/ic_baseline_menu_book_24df"
             android:paddingStart="5sp"
             android:paddingTop="8sp"
             android:text="Add class"
@@ -73,6 +75,7 @@
             android:layout_marginRight="30sp"
             android:background="@drawable/btn2"
 
+            android:drawableStart="@drawable/ic_baseline_checklist_rtl_24ceck"
             android:paddingStart="5sp"
             android:paddingTop="5sp"
             android:text="Add quiz"
@@ -89,6 +92,7 @@
             android:layout_marginRight="30sp"
             android:background="@drawable/btn2"
 
+            android:drawableStart="@drawable/ic_baseline_post_add_24pp"
             android:paddingStart="5sp"
             android:paddingTop="8sp"
             android:text="Add blog post"
@@ -106,6 +110,7 @@
             android:layout_marginRight="30sp"
             android:background="@drawable/btn2"
 
+            android:drawableStart="@drawable/ic_baseline_checklist_rtl_24ceck"
             android:paddingStart="5sp"
             android:paddingTop="8sp"
             android:text="Show Quiz"
@@ -122,6 +127,7 @@
             android:layout_marginRight="30sp"
             android:background="@drawable/btn2"
 
+            android:drawableStart="@drawable/ic_baseline_account_box_24ac"
             android:paddingStart="5sp"
             android:paddingTop="8sp"
             android:text="Your account"

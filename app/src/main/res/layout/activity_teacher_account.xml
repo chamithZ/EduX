@@ -8,6 +8,17 @@
 
 
     <ImageView
+        android:id="@+id/home2"
+        android:layout_width="51dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+        app:srcCompat="@drawable/ic_baseline_home_24home" />
+
+    <ImageView
         android:id="@+id/imageView13"
         android:layout_width="415dp"
         android:layout_height="276dp"
@@ -22,39 +33,24 @@
 
     <LinearLayout
         android:id="@+id/linearLayout5"
-        android:layout_width="347dp"
-        android:layout_height="358dp"
-        android:layout_marginBottom="44dp"
+        android:layout_width="331dp"
+        android:layout_height="325dp"
+        android:layout_marginBottom="92dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="32dp">
+        tools:layout_editor_absoluteX="40dp">
 
-
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="281dp"
-            android:layout_height="42dp"
-            android:layout_marginLeft="30sp"
-            android:layout_marginTop="16sp"
-            android:layout_marginRight="30sp"
-            android:background="@drawable/btn2"
-
-            android:paddingStart="5sp"
-            android:paddingTop="8sp"
-            android:text="Your progress"
-            android:textAlignment="center"
-            android:textColor="@color/Pcolor"
-            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/logout"
-            android:layout_width="280dp"
-            android:layout_height="42dp"
+            android:layout_width="284dp"
+            android:layout_height="64dp"
             android:layout_marginLeft="30sp"
             android:layout_marginTop="16sp"
             android:layout_marginRight="30sp"
             android:background="@drawable/btn2"
 
+            android:drawableStart="@drawable/ic_baseline_logout_24"
             android:paddingStart="5sp"
             android:paddingTop="8sp"
             android:text="Logout"

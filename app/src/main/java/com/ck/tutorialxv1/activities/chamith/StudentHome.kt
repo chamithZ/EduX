@@ -54,7 +54,7 @@ class StudentHome : AppCompatActivity() {
                 else -> "Good evening,"
             }
 
-            binding.userName.text = " $greeting $userName!"
+            binding.userName.text = " $greeting $userName \uD83D\uDE0A!"
         }
     }
 }

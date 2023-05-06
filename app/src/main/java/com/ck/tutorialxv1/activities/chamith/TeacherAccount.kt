@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ck.tutorialxv1.R
+import com.ck.tutorialxv1.activities.chamith.MainActivity
 import com.ck.tutorialxv1.activities.chamith.login
 import com.ck.tutorialxv1.databinding.ActivityTeacherAccountBinding
 
@@ -18,6 +19,13 @@ class teacherAccount : AppCompatActivity() {
         binding = ActivityTeacherAccountBinding.inflate(layoutInflater)
         setContentView(binding.root)
         sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+
+
+
+        binding.logout.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.logout.setOnClickListener {
             val editor = sharedPreferences.edit()

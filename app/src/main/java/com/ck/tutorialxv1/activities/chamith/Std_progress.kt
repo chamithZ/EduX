@@ -57,10 +57,10 @@ class Std_progress : AppCompatActivity() {
 
     private fun getLevel(progress: Long): String {
         return when (progress) {
-            in 0..20 -> "Beginner"
-            in 20..60 -> "Intermediate"
-            in 60..200 -> "Advanced"
-            else -> "Expert"
+            in 0..20 -> "Beginner \uD83E\uDD49 "
+            in 20..60 -> "Intermediate \uD83E\uDD48"
+            in 60..200 -> "Advanced \uD83E\uDD47"
+            else -> "Expert \uD83C\uDF96️"
         }
     }
 }

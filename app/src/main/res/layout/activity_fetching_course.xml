@@ -10,17 +10,18 @@
         android:id="@+id/textView6"
         android:layout_width="184dp"
         android:layout_height="36dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginTop="16dp"
         android:text="Courses"
         android:textColor="@color/fontBlue1"
         android:textSize="24sp"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/rvCourse"
-        app:layout_constraintEnd_toEndOf="@+id/rvCourse"
-        app:layout_constraintHorizontal_bias="0.646"
-        app:layout_constraintStart_toStartOf="@+id/rvCourse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.72" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvCourse"
@@ -32,10 +33,9 @@
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.626"
+        app:layout_constraintVertical_bias="0.835"
         tools:listitem="@layout/courselist" />
 
     <TextView
