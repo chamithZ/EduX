@@ -20,14 +20,15 @@
         app:layout_constraintVertical_bias="0.138"
         app:srcCompat="@mipmap/ic_launcher_top_bg_foreground" />
 
+
     <LinearLayout
         android:id="@+id/linearLayout5"
         android:layout_width="355dp"
         android:layout_height="442dp"
-        android:layout_marginStart="28dp"
         android:layout_marginBottom="4dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
@@ -44,7 +45,8 @@
             android:text="Your classes"
             android:textAlignment="center"
             android:textColor="@color/Pcolor"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            app:drawableStartCompat="@drawable/ic_baseline_bookmarks_24book" />
 
         <TextView
             android:id="@+id/addclass"
@@ -55,6 +57,7 @@
             android:layout_marginRight="30sp"
             android:background="@drawable/btn2"
 
+            android:drawableStart="@drawable/ic_baseline_menu_book_24df"
             android:paddingStart="5sp"
             android:paddingTop="8sp"
             android:text="Add class"
@@ -72,6 +75,7 @@
             android:layout_marginRight="30sp"
             android:background="@drawable/btn2"
 
+            android:drawableStart="@drawable/ic_baseline_checklist_rtl_24ceck"
             android:paddingStart="5sp"
             android:paddingTop="5sp"
             android:text="Add quiz"
@@ -88,6 +92,7 @@
             android:layout_marginRight="30sp"
             android:background="@drawable/btn2"
 
+            android:drawableStart="@drawable/ic_baseline_post_add_24pp"
             android:paddingStart="5sp"
             android:paddingTop="8sp"
             android:text="Add blog post"
@@ -97,17 +102,18 @@
 
 
         <TextView
-            android:id="@+id/textView16"
-            android:layout_width="281dp"
-            android:layout_height="42dp"
+            android:id="@+id/showQuizes"
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="30sp"
             android:layout_marginTop="16sp"
             android:layout_marginRight="30sp"
             android:background="@drawable/btn2"
 
+            android:drawableStart="@drawable/ic_baseline_checklist_rtl_24ceck"
             android:paddingStart="5sp"
             android:paddingTop="8sp"
-            android:text="Your progress"
+            android:text="Show Quiz"
             android:textAlignment="center"
             android:textColor="@color/Pcolor"
             android:textSize="24sp" />
@@ -121,6 +127,7 @@
             android:layout_marginRight="30sp"
             android:background="@drawable/btn2"
 
+            android:drawableStart="@drawable/ic_baseline_account_box_24ac"
             android:paddingStart="5sp"
             android:paddingTop="8sp"
             android:text="Your account"
@@ -128,24 +135,7 @@
             android:textColor="@color/Pcolor"
             android:textSize="24sp" />
 
-        <TextView
-            android:id="@+id/showQuizes"
-            android:layout_width="277dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30sp"
-            android:layout_marginTop="16sp"
-            android:layout_marginRight="30sp"
-            android:background="@drawable/btn2"
-
-            android:paddingStart="5sp"
-            android:paddingTop="8sp"
-            android:text="Show Quiz"
-            android:textAlignment="center"
-            android:textColor="@color/Pcolor"
-            android:textSize="24sp" />
-
     </LinearLayout>
-
 
     <ImageView
         android:id="@+id/imageView7"
@@ -157,7 +147,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_launcher_teach_home" />
 
     <TextView
@@ -168,7 +158,8 @@
         android:layout_marginBottom="15dp"
         android:text=""
         android:textColor="@color/pgrey"
-        android:textSize="25sp"
+        android:textSize="30sp"
+        android:fontFamily="@font/oswald"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView7"
         app:layout_constraintEnd_toEndOf="parent"

@@ -11,18 +11,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Material3.Light.NoActionBar">
-
+        <activity
+            android:name=".activities.chamith.StudentAccount"
+            android:exported="false" />
+        <activity
+            android:name=".activities.chamith.Std_progress"
+            android:exported="false" />
+        <activity
+            android:name=".activities.chamith.EnrollCourseview"
+            android:exported="false" />
+        <activity
+            android:name=".Enroll_courses"
+            android:exported="false" />
         <activity
             android:name=".activities.chamith.SignView"
             android:exported="false" />
-
         <activity
             android:name=".activities.sehan.ViewAllQuiz"
             android:exported="false" />
         <activity
             android:name=".activities.sehan.ViewAllQuizStd"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".activities.chamith.StudentHome"
             android:exported="false" />
@@ -50,13 +59,12 @@
         <activity
             android:name=".activities.chamith.login"
             android:exported="true"
-            android:theme="@style/Theme.Material3.Light.NoActionBar"
-            >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            android:theme="@style/Theme.Material3.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".activities.register"
@@ -64,15 +72,10 @@
             android:theme="@style/Theme.Material3.Light.NoActionBar" />
         <activity
             android:name=".activities.chamith.MainActivity"
-            android:exported="false" />
-        <!-- sehan -->
-
-
+            android:exported="false" /> <!-- sehan -->
         <activity
             android:name=".activities.sehan.DialogQuizInfo"
             android:exported="false" />
-
-
         <activity
             android:name=".activities.sehan.View_Quiz_Details"
             android:exported="false" />
@@ -84,10 +87,13 @@
             android:exported="false" />
         <activity
             android:name=".activities.sehan.LoginIntro"
-            android:exported="false">
-
-        </activity>
-
+            android:exported="false" />
+        <activity
+            android:name=".activities.chamith.StdCourseOverview"
+            android:exported="false" />
+        <activity
+            android:name=".activities.chamith.Enroll_courses"
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"

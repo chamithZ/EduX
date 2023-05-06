@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.ck.tutorialxv1.StdCourseOverview
 import com.ck.tutorialxv1.adapter.chamith.CourseAdapter
 import com.ck.tutorialxv1.databinding.ActivityCourseFetchBinding
 import com.ck.tutorialxv1.models.courseModel
@@ -35,6 +34,8 @@ class FetchingAllCourse : AppCompatActivity() {
     }
 
     private fun getCourseData() {
+
+
         binding.rvCourse.visibility = View.GONE
         binding.tvLoadingData.visibility = View.VISIBLE
 
@@ -70,6 +71,7 @@ class FetchingAllCourse : AppCompatActivity() {
                             intent.putExtra("time", courseList[position].time)
                             intent.putExtra("date", courseList[position].date)
                             intent.putExtra("zoomLink", courseList[position].zoomLink)
+                            intent.putExtra("userId",courseList[position].userId)
                             startActivity(intent)
 
                         }
