@@ -45,36 +45,6 @@
             android:textAlignment="center"
             android:textColor="@color/Pcolor"
             android:textSize="24sp" />
-        <TextView
-            android:id="@+id/account"
-            android:layout_width="280dp"
-            android:layout_height="42dp"
-            android:layout_marginLeft="30sp"
-            android:layout_marginTop="16sp"
-            android:layout_marginRight="30sp"
-            android:background="@drawable/btn2"
-
-            android:paddingStart="5sp"
-            android:paddingTop="8sp"
-            android:text="Your account"
-            android:textAlignment="center"
-            android:textColor="@color/Pcolor"
-            android:textSize="24sp" />
-        <TextView
-            android:id="@+id/update"
-            android:layout_width="280dp"
-            android:layout_height="42dp"
-            android:layout_marginLeft="30sp"
-            android:layout_marginTop="16sp"
-            android:layout_marginRight="30sp"
-            android:background="@drawable/btn2"
-
-            android:paddingStart="5sp"
-            android:paddingTop="8sp"
-            android:text="Update profile"
-            android:textAlignment="center"
-            android:textColor="@color/Pcolor"
-            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/logout"
@@ -98,14 +68,14 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="68dp"
-        android:text="Hello"
+        android:layout_marginBottom="52dp"
+        android:text="Profile"
         android:textColor="@color/pgrey"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView7"
         app:layout_constraintEnd_toStartOf="@+id/user_name"
-        app:layout_constraintHorizontal_bias="0.795"
+        app:layout_constraintHorizontal_bias="0.583"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView

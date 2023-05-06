@@ -8,5 +8,9 @@ data class UserModel(
     var grade: String? = null,
     val qualification: String = "",
     val bankAc: String = "",
-    val branch: String = ""
+    val branch: String = "",
+    val eduPoints:Long=0,
+    val level:String="Silver",
+    val qPoints:Long=0,
+    val coursesEnrolled:Long=0
     )

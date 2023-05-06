@@ -22,49 +22,16 @@
 
     <LinearLayout
         android:id="@+id/linearLayout5"
-        android:layout_width="331dp"
-        android:layout_height="297dp"
-        android:layout_marginBottom="60dp"
+        android:layout_width="337dp"
+        android:layout_height="307dp"
+        android:layout_marginBottom="40dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <TextView
-            android:id="@+id/viewCourse"
-            android:layout_width="280dp"
-            android:layout_height="42dp"
-            android:layout_marginLeft="30sp"
-            android:layout_marginTop="16sp"
-            android:layout_marginRight="30sp"
-            android:background="@drawable/btn2"
-
-            android:paddingStart="5sp"
-            android:paddingTop="8sp"
-            android:text="View Courses"
-            android:textAlignment="center"
-            android:textColor="@color/Pcolor"
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/yourCourse"
-            android:layout_width="280dp"
-            android:layout_height="42dp"
-            android:layout_marginLeft="30sp"
-            android:layout_marginTop="16sp"
-            android:layout_marginRight="30sp"
-            android:background="@drawable/btn2"
-
-            android:paddingStart="5sp"
-            android:paddingTop="8sp"
-            android:text="Your Courses"
-            android:textAlignment="center"
-            android:textColor="@color/Pcolor"
-            android:textSize="24sp" />
+        tools:layout_editor_absoluteX="32dp">
 
 
         <TextView
-            android:id="@+id/viewQuizzes"
+            android:id="@+id/textView16"
             android:layout_width="281dp"
             android:layout_height="42dp"
             android:layout_marginLeft="30sp"
@@ -73,15 +40,14 @@
             android:background="@drawable/btn2"
 
             android:paddingStart="5sp"
-            android:paddingTop="5sp"
-            android:text="View Quizzes"
+            android:paddingTop="8sp"
+            android:text="Your progress"
             android:textAlignment="center"
             android:textColor="@color/Pcolor"
             android:textSize="24sp" />
 
-
         <TextView
-            android:id="@+id/Saccount"
+            android:id="@+id/logout"
             android:layout_width="280dp"
             android:layout_height="42dp"
             android:layout_marginLeft="30sp"
@@ -91,7 +57,7 @@
 
             android:paddingStart="5sp"
             android:paddingTop="8sp"
-            android:text="Your account"
+            android:text="Logout"
             android:textAlignment="center"
             android:textColor="@color/Pcolor"
             android:textSize="24sp" />
@@ -100,29 +66,28 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="218dp"
-        android:layout_height="168dp"
+        android:layout_width="180dp"
+        android:layout_height="173dp"
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/get_started"/>
+        app:srcCompat="@drawable/ic_launcher_teach_home" />
 
     <TextView
         android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
         android:layout_marginBottom="70dp"
-        android:fontFamily="@font/oswald"
         android:text=""
         android:textColor="@color/pgrey"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803" />
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

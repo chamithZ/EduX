@@ -192,12 +192,12 @@
             android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/enroll"
+                android:id="@+id/unenroll"
                 android:layout_width="153dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="90sp"
                 android:background="@drawable/btn1"
-                android:text="Enroll"
+                android:text="Unenroll"
                 android:textAllCaps="false"
                 android:textColor="@color/pgrey" />
 

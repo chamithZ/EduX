@@ -1,23 +1,29 @@
-package com.ck.tutorialxv1.activities
+package com.ck.tutorialxv1.activities.chamith
 
 import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ck.tutorialxv1.R
-import com.ck.tutorialxv1.activities.chamith.login
-import com.ck.tutorialxv1.databinding.ActivityTeacherAccountBinding
+import com.ck.tutorialxv1.databinding.ActivityStudentAccountBinding
 
-class teacherAccount : AppCompatActivity() {
-    private lateinit var binding: ActivityTeacherAccountBinding
+
+class StudentAccount : AppCompatActivity() {
+    private lateinit var binding: ActivityStudentAccountBinding
     private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_teacher_account)
-        binding = ActivityTeacherAccountBinding.inflate(layoutInflater)
+        binding = ActivityStudentAccountBinding.inflate(layoutInflater)
         setContentView(binding.root)
         sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+
+        binding.textView16.setOnClickListener{
+            val intent = Intent(this, Std_progress::class.java)
+            startActivity(intent)
+        }
+
 
         binding.logout.setOnClickListener {
             val editor = sharedPreferences.edit()

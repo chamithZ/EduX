@@ -26,12 +26,16 @@ class StudentHome : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.yourCourse .setOnClickListener {
+            val intent = Intent(this, Enroll_courses::class.java)
+            startActivity(intent)
+        }
         binding.viewQuizzes .setOnClickListener {
             val intent = Intent(this, ViewAllQuiz::class.java)
             startActivity(intent)
         }
         binding.Saccount .setOnClickListener {
-            val intent = Intent(this, teacherAccount::class.java)
+            val intent = Intent(this, StudentAccount::class.java)
             startActivity(intent)
         }
 
