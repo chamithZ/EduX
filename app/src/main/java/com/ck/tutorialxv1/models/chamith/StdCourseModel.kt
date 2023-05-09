@@ -7,5 +7,6 @@ data class StdCourseModel(
     val zoomLink:String="",
     val date:String="",
     val time:String="",
+    val TId:String="",
     val userId:String=""
 )

@@ -6,53 +6,66 @@
     android:layout_height="match_parent">
 
 
+    <ImageView
+        android:id="@+id/home4"
+        android:layout_width="44dp"
+        android:layout_height="52dp"
+
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_baseline_home_24home" />
+
     <TextView
         android:id="@+id/textView28"
         android:layout_width="186dp"
         android:layout_height="43dp"
-        android:layout_marginBottom="8dp"
         android:text="Course Overview"
         android:textColor="@color/fontBlue1"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666" />
 
     <LinearLayout
         android:id="@+id/linearLayout8"
-        android:layout_width="359dp"
-        android:layout_height="384dp"
-        android:layout_marginTop="29dp"
+        android:layout_width="345dp"
+        android:layout_height="387dp"
+        android:layout_marginBottom="148dp"
         android:background="@drawable/all_rounded_corner"
         android:orientation="vertical"
         android:padding="8sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_width="315dp"
+            android:layout_height="59dp"
             android:layout_marginLeft="10sp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView21"
-                android:layout_width="123dp"
-                android:layout_height="63dp"
+                android:layout_width="116dp"
+                android:layout_height="41dp"
                 android:text="@string/subject"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView30"
-                android:layout_width="123dp"
-                android:layout_height="63dp"
-                android:layout_marginLeft="25sp"
+                android:id="@+id/subjectE"
+                android:layout_width="163dp"
+                android:layout_height="41dp"
+                android:layout_marginLeft="5sp"
                 android:text=""
                 android:textColor="@color/fontBlue1"
                 android:textSize="20sp" />
@@ -61,59 +74,59 @@
 
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_width="345dp"
+            android:layout_height="46dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView34"
-                android:layout_width="149dp"
-                android:layout_height="71dp"
+                android:layout_width="132dp"
+                android:layout_height="38dp"
                 android:layout_marginLeft="10sp"
                 android:text="Grade :"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView46"
-                android:layout_width="45dp"
-                android:layout_height="35dp"
-                android:text="10"
-                android:textColor="@color/fontBlue1"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="57dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView42"
-                android:layout_width="157dp"
-                android:layout_height="40dp"
-                android:paddingLeft="10sp"
-                android:text="On :"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textView19"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/gradeE"
+                android:layout_width="167dp"
+                android:layout_height="38dp"
                 android:text=""
                 android:textColor="@color/fontBlue1"
                 android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_width="345dp"
+            android:layout_height="53dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="146dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="10sp"
+                android:text="On :"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/dateE"
+                android:layout_width="176dp"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textColor="@color/fontBlue1"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="334dp"
+            android:layout_height="61dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView43"
-                android:layout_width="40dp"
+                android:layout_width="138dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10sp"
                 android:text=" At :"
@@ -121,24 +134,33 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView44"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100sp"
+                android:id="@+id/timeE"
+                android:layout_width="158dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3sp"
                 android:text=""
                 android:textColor="@color/fontBlue1"
                 android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="339dp"
-            android:layout_height="75dp"
+            android:layout_width="332dp"
+            android:layout_height="78dp"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView22"
-                android:layout_width="197dp"
-                android:layout_height="139dp"
+                android:id="@+id/textView49"
+                android:layout_width="120dp"
+                android:layout_height="59dp"
+                android:layout_marginLeft="10sp"
+                android:text=" Link :"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/zoomE"
+                android:layout_width="199dp"
+                android:layout_height="match_parent"
                 android:text="TextView"
                 android:textColor="@color/fontBlue1"
                 android:textSize="20sp"
@@ -146,6 +168,7 @@
 
 
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -167,15 +190,5 @@
 
 
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="250dp"
-        android:layout_height="129dp"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout8"
-        app:srcCompat="@drawable/ic_launcher_teach_foreground"
-        tools:layout_editor_absoluteY="83dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

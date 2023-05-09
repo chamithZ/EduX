@@ -14,8 +14,7 @@ import com.ck.tutorialxv1.models.chamith.StdCourseModel
 import com.ck.tutorialxv1.models.chamith.UserModel
 import com.ck.tutorialxv1.models.courseModel
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 
 class StdCourseOverview : AppCompatActivity() {
 
@@ -28,6 +27,8 @@ class StdCourseOverview : AppCompatActivity() {
         setContentView(binding.root)
 
         setValuesToViews()
+
+
 
         binding.enroll.setOnClickListener {
             enrollInCourse()
@@ -46,7 +47,24 @@ class StdCourseOverview : AppCompatActivity() {
         binding.textView30.text = intent.getStringExtra("subject")
         binding.textView19.text = intent.getStringExtra("date")
         binding.textView44.text = intent.getStringExtra("time")
-        binding.textView22.text = intent.getStringExtra("zoomLink")
+        binding.textView46.text = intent.getStringExtra("grade")
+        val TId = intent.getStringExtra("userId") ?: ""  //get teacher Id for this course
+
+
+        val userRef = FirebaseDatabase.getInstance().getReference("users").child(TId)
+        userRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    val user = snapshot.getValue(UserModel::class.java)
+                    binding.textView22.text = user?.name
+                    binding.qText.text=user?.qualification
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+            }
+        })
+
     }
 
 
@@ -64,13 +82,14 @@ class StdCourseOverview : AppCompatActivity() {
         val time = intent.getStringExtra("time") ?: ""
         val date = intent.getStringExtra("date") ?: ""
         val zoomLink = intent.getStringExtra("zoomLink") ?: ""
+        val TId=intent.getStringExtra("userId") ?: ""
 
         // Get student ID from Firebase Auth
         val studentId = getUserId()
 
         db = FirebaseDatabase.getInstance().getReference("std")
 
-        val stdcourse = StdCourseModel(courseId, subject, grade, zoomLink, date, time, studentId)
+        val stdcourse = StdCourseModel(courseId, subject, grade, zoomLink, date, time,TId, studentId)
 
         val enrollmentRef = db.push()
         enrollmentRef.setValue(stdcourse)
