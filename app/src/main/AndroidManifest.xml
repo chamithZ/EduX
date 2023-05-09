@@ -11,6 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Material3.Light.NoActionBar">
+
+
+        <activity
+            android:name=".activities.supuni.AddBook"
+            android:exported="false" />
+        <activity
+            android:name=".activities.supuni.EditBook"
+            android:exported="false" />
+        <activity
+            android:name=".activities.supuni.ReadBook"
+            android:exported="false" />
         <activity
             android:name=".activities.chamith.StudentAccount"
             android:exported="false" />
