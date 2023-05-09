@@ -8,8 +8,11 @@ import com.ck.tutorialxv1.R
 import com.ck.tutorialxv1.activities.hansika.AddBlog
 import com.ck.tutorialxv1.activities.hansika.ReadBlog
 import com.ck.tutorialxv1.activities.sehan.ViewAllQuiz
+import com.ck.tutorialxv1.activities.supuni.AddBook
+import com.ck.tutorialxv1.activities.supuni.ReadBook
 import com.ck.tutorialxv1.activities.teacherAccount
 import com.ck.tutorialxv1.databinding.ActivityStudentHomeBinding
+import kotlinx.android.synthetic.main.activity_add_book.*
 import java.util.*
 
 class StudentHome : AppCompatActivity() {
@@ -50,7 +53,15 @@ class StudentHome : AppCompatActivity() {
             val intent = Intent(this, ReadBlog::class.java)
             startActivity(intent)
         }
+        binding.addBook.setOnClickListener {
+            val intent = Intent(this, AddBook::class.java)
+            startActivity(intent)
+        }
 
+        binding.viewBook .setOnClickListener {
+            val intent = Intent(this, ReadBook ::class.java)
+            startActivity(intent)
+        }
 
         val userName = sharedPreferences.getString("name","")
 
@@ -67,7 +78,7 @@ class StudentHome : AppCompatActivity() {
                 else -> "Good evening,"
             }
 
-            binding.userName.text = " $greeting $userName \uD83D\uDE0A!"
+            binding.userName.text = " $greeting $userName! \uD83D\uDE0A"
         }
     }
 }

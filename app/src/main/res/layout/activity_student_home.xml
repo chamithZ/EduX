@@ -15,6 +15,7 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.138"
@@ -22,12 +23,13 @@
 
     <LinearLayout
         android:id="@+id/linearLayout5"
-        android:layout_width="322dp"
-        android:layout_height="358dp"
-        android:layout_marginBottom="60dp"
+        android:layout_width="324dp"
+        android:layout_height="449dp"
+        android:layout_marginBottom="4dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
@@ -116,34 +118,51 @@
             android:textColor="@color/Pcolor"
             android:textSize="24sp" />
 
-
         <TextView
-            android:id="@+id/Saccount"
-            android:layout_width="280dp"
+            android:id="@+id/addBook"
+            android:layout_width="281dp"
             android:layout_height="42dp"
             android:layout_marginLeft="30sp"
             android:layout_marginTop="16sp"
             android:layout_marginRight="30sp"
             android:background="@drawable/btn2"
 
-            android:drawableStart="@drawable/ic_baseline_account_box_24"
+            android:drawableStart="@drawable/ic_baseline_add_to_photos_24e"
             android:paddingStart="5sp"
-            android:paddingTop="8sp"
-            android:text="Your account"
+            android:paddingTop="5sp"
+            android:text="Add Book"
             android:textAlignment="center"
             android:textColor="@color/Pcolor"
             android:textSize="24sp" />
 
+        <TextView
+            android:id="@+id/viewBook"
+            android:layout_width="281dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="16sp"
+            android:layout_marginRight="30sp"
+            android:background="@drawable/btn2"
+
+            android:drawableStart="@drawable/ic_baseline_bookmarks_24book"
+            android:paddingStart="5sp"
+            android:paddingTop="5sp"
+            android:text="View Books"
+            android:textAlignment="center"
+            android:textColor="@color/Pcolor"
+            android:textSize="24sp" />
+
+
     </LinearLayout>
+
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="218dp"
-        android:layout_height="168dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="177dp"
+        android:layout_height="148dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/get_started" />
 
@@ -151,7 +170,7 @@
         android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="12dp"
         android:fontFamily="@font/oswald"
         android:text=""
         android:textColor="@color/pgrey"
@@ -161,6 +180,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/Saccount"
+        android:layout_width="79dp"
+        android:layout_height="74dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_leeduac_foreground" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,7 +15,10 @@
 
         <activity
             android:name=".activities.supuni.AddBook"
-            android:exported="false" />
+
+            android:exported="false">
+
+        </activity>
         <activity
             android:name=".activities.supuni.EditBook"
             android:exported="false" />
@@ -32,7 +35,7 @@
             android:name=".activities.chamith.EnrollCourseview"
             android:exported="false" />
         <activity
-            android:name=".Enroll_courses"
+            android:name=".activities.chamith.Enroll_courses"
             android:exported="false" />
         <activity
             android:name=".activities.chamith.SignView"
@@ -102,9 +105,7 @@
         <activity
             android:name=".activities.chamith.StdCourseOverview"
             android:exported="false" />
-        <activity
-            android:name=".activities.chamith.Enroll_courses"
-            android:exported="false" />
+
 
         <activity
             android:name=".activities.hansika.AddBlog"
@@ -121,6 +122,7 @@
         <activity
             android:name=".activities.sehan.getStart"
             android:exported="false" />
+
 
         <meta-data
             android:name="preloaded_fonts"
