@@ -11,6 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Material3.Light.NoActionBar">
+
+
+        <activity
+            android:name=".activities.supuni.AddBook"
+            android:exported="false" />
+        <activity
+            android:name=".activities.supuni.EditBook"
+            android:exported="false" />
+        <activity
+            android:name=".activities.supuni.ReadBook"
+            android:exported="false" />
         <activity
             android:name=".activities.chamith.StudentAccount"
             android:exported="false" />
@@ -20,15 +31,17 @@
         <activity
             android:name=".activities.chamith.EnrollCourseview"
             android:exported="false" />
-        <activity
-            android:name=".Enroll_courses"
-            android:exported="false" />
+
         <activity
             android:name=".activities.chamith.SignView"
             android:exported="false" />
         <activity
             android:name=".activities.sehan.ViewAllQuiz"
             android:exported="false" />
+        <activity
+            android:name=".activities.sehan.QuizResultActivity"
+            android:exported="false" />
+
         <activity
             android:name=".activities.sehan.ViewAllQuizStd"
             android:exported="false" />
@@ -87,6 +100,9 @@
             android:exported="false" />
         <activity
             android:name=".activities.sehan.LoginIntro"
+            android:exported="false" />
+        <activity
+            android:name=".activities.sehan.SingleQuizStd"
             android:exported="false" />
         <activity
             android:name=".activities.chamith.StdCourseOverview"

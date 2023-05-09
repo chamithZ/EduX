@@ -8,6 +8,7 @@ import com.ck.tutorialxv1.R
 import com.ck.tutorialxv1.activities.hansika.AddBlog
 import com.ck.tutorialxv1.activities.hansika.ReadBlog
 import com.ck.tutorialxv1.activities.sehan.ViewAllQuiz
+import com.ck.tutorialxv1.activities.sehan.ViewAllQuizStd
 import com.ck.tutorialxv1.activities.teacherAccount
 import com.ck.tutorialxv1.databinding.ActivityStudentHomeBinding
 import java.util.*
@@ -33,7 +34,7 @@ class StudentHome : AppCompatActivity() {
             startActivity(intent)
         }
         binding.viewQuizzes .setOnClickListener {
-            val intent = Intent(this, ViewAllQuiz::class.java)
+            val intent = Intent(this, ViewAllQuizStd::class.java)
             startActivity(intent)
         }
         binding.Saccount .setOnClickListener {
