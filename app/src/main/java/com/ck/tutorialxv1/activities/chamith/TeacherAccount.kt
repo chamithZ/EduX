@@ -36,6 +36,7 @@ class teacherAccount : AppCompatActivity() {
             val intent = Intent(this, login::class.java)
             startActivity(intent)
             finish()
+            finishAffinity() // close the  previous activity
         }
 
     }
