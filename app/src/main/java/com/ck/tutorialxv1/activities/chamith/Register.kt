@@ -24,9 +24,7 @@ class register : AppCompatActivity() {
         setContentView(binding.root)
         firebaseAuth= FirebaseAuth.getInstance()
 
-
-
-        binding.login3.setOnClickListener(){ // register
+        binding.login3.setOnClickListener() {
             val name = binding.name.text.toString()
             val email = binding.email.text.toString()
             val pass = binding.password.text.toString()
@@ -35,20 +33,28 @@ class register : AppCompatActivity() {
             val age = binding.age.text.toString()
             val grade = binding.editTextNumberSigned.text.toString()
 
-            if (binding.checkBox.isChecked) { // Check if the checkbox is ticked
+            if (binding.checkBox.isChecked) {
                 if (email.isNotEmpty() && pass.isNotEmpty()) {
                     if (pass == repass) {
-                        firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener{
-                            if(it.isSuccessful) {
-                                val user = UserModel(name, email, contactNum, age, grade)
-                                FirebaseDatabase.getInstance().reference.child("users").child(firebaseAuth.currentUser?.uid ?: "")
-                                    .setValue(user)
-                                val intent = Intent(this, login::class.java)
-                                startActivity(intent)
+                        if (isValidEmail(email)) { // Validate email
+                            if (isValidPhone(contactNum)) { // Validate phone number
+                                firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener{
+                                    if(it.isSuccessful) {
+                                        val user = UserModel(name, email, contactNum, age, grade)
+                                        FirebaseDatabase.getInstance().reference.child("users").child(firebaseAuth.currentUser?.uid ?: "")
+                                            .setValue(user)
+                                        val intent = Intent(this, login::class.java)
+                                        startActivity(intent)
 
+                                    } else {
+                                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                                    }
+                                }
                             } else {
-                                Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this, "please enter valid phone number", Toast.LENGTH_SHORT).show()
                             }
+                        } else {
+                            Toast.makeText(this, "please enter valid email", Toast.LENGTH_SHORT).show()
                         }
                     } else {
                         Toast.makeText(this, "Password does not match", Toast.LENGTH_SHORT).show()
@@ -60,6 +66,17 @@ class register : AppCompatActivity() {
                 Toast.makeText(this, "Please agree to the terms and conditions to continue", Toast.LENGTH_SHORT).show()
             }
         }
+    }
 
+    // Email validation fun
+    private fun isValidEmail(email: String): Boolean {
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
+
+    // Phone number validation fun
+    private fun isValidPhone(phone: String): Boolean {
+        val num = """^\d{10}$""".toRegex()
+        return num.matches(phone)
     }
+
+}

@@ -5,6 +5,8 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ck.tutorialxv1.R
+import com.ck.tutorialxv1.activities.hansika.AddBlog
+import com.ck.tutorialxv1.activities.hansika.ReadBlog
 import com.ck.tutorialxv1.activities.sehan.ViewAllQuiz
 import com.ck.tutorialxv1.activities.teacherAccount
 import com.ck.tutorialxv1.databinding.ActivityStudentHomeBinding
@@ -38,6 +40,17 @@ class StudentHome : AppCompatActivity() {
             val intent = Intent(this, StudentAccount::class.java)
             startActivity(intent)
         }
+
+        binding.addblog.setOnClickListener {
+            val intent = Intent(this, AddBlog::class.java)
+            startActivity(intent)
+        }
+
+        binding.viewBlog .setOnClickListener {
+            val intent = Intent(this, ReadBlog::class.java)
+            startActivity(intent)
+        }
+
 
         val userName = sharedPreferences.getString("name","")
 
