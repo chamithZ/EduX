@@ -5,6 +5,8 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ck.tutorialxv1.R
+import com.ck.tutorialxv1.activities.hansika.AddBlog
+import com.ck.tutorialxv1.activities.hansika.ReadBlog
 import com.ck.tutorialxv1.activities.sehan.ViewAllQuiz
 import com.ck.tutorialxv1.activities.sehan.ViewAllQuizStd
 import com.ck.tutorialxv1.activities.teacherAccount
@@ -27,14 +29,29 @@ class StudentHome : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.yourCourse .setOnClickListener {
+            val intent = Intent(this, Enroll_courses::class.java)
+            startActivity(intent)
+        }
         binding.viewQuizzes .setOnClickListener {
             val intent = Intent(this, ViewAllQuizStd::class.java)
             startActivity(intent)
         }
         binding.Saccount .setOnClickListener {
-            val intent = Intent(this, teacherAccount::class.java)
+            val intent = Intent(this, StudentAccount::class.java)
             startActivity(intent)
         }
+
+        binding.addblog.setOnClickListener {
+            val intent = Intent(this, AddBlog::class.java)
+            startActivity(intent)
+        }
+
+        binding.viewBlog .setOnClickListener {
+            val intent = Intent(this, ReadBlog::class.java)
+            startActivity(intent)
+        }
+
 
         val userName = sharedPreferences.getString("name","")
 
@@ -51,7 +68,7 @@ class StudentHome : AppCompatActivity() {
                 else -> "Good evening,"
             }
 
-            binding.userName.text = " $greeting $userName!"
+            binding.userName.text = " $greeting $userName \uD83D\uDE0A!"
         }
     }
 }

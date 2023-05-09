@@ -22,9 +22,9 @@
 
     <LinearLayout
         android:id="@+id/linearLayout5"
-        android:layout_width="345dp"
-        android:layout_height="304dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="322dp"
+        android:layout_height="358dp"
+        android:layout_marginBottom="60dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,6 +39,7 @@
             android:layout_marginRight="30sp"
             android:background="@drawable/btn2"
 
+            android:drawableStart="@drawable/ic_baseline_menu_book_24df"
             android:paddingStart="5sp"
             android:paddingTop="8sp"
             android:text="View Courses"
@@ -55,6 +56,7 @@
             android:layout_marginRight="30sp"
             android:background="@drawable/btn2"
 
+            android:drawableStart="@drawable/ic_baseline_bookmarks_24book"
             android:paddingStart="5sp"
             android:paddingTop="8sp"
             android:text="Your Courses"
@@ -72,9 +74,44 @@
             android:layout_marginRight="30sp"
             android:background="@drawable/btn2"
 
+            android:drawableStart="@drawable/ic_baseline_checklist_rtl_24ceck"
             android:paddingStart="5sp"
             android:paddingTop="5sp"
             android:text="View Quizzes"
+            android:textAlignment="center"
+            android:textColor="@color/Pcolor"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/addblog"
+            android:layout_width="281dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="16sp"
+            android:layout_marginRight="30sp"
+            android:background="@drawable/btn2"
+
+            android:drawableStart="@drawable/ic_baseline_post_add_24pp"
+            android:paddingStart="5sp"
+            android:paddingTop="5sp"
+            android:text="Add blog"
+            android:textAlignment="center"
+            android:textColor="@color/Pcolor"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/viewBlog"
+            android:layout_width="281dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="16sp"
+            android:layout_marginRight="30sp"
+            android:background="@drawable/btn2"
+
+            android:drawableStart="@drawable/ic_baseline_bookmarks_24book"
+            android:paddingStart="5sp"
+            android:paddingTop="5sp"
+            android:text="View blog"
             android:textAlignment="center"
             android:textColor="@color/Pcolor"
             android:textSize="24sp" />
@@ -89,6 +126,7 @@
             android:layout_marginRight="30sp"
             android:background="@drawable/btn2"
 
+            android:drawableStart="@drawable/ic_baseline_account_box_24"
             android:paddingStart="5sp"
             android:paddingTop="8sp"
             android:text="Your account"
@@ -102,28 +140,28 @@
         android:id="@+id/imageView7"
         android:layout_width="218dp"
         android:layout_height="168dp"
-        android:layout_marginBottom="112dp"
+        android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_launcher_learn_foreground" />
+        app:srcCompat="@drawable/get_started" />
 
     <TextView
         android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="48dp"
         android:layout_marginBottom="70dp"
+        android:fontFamily="@font/oswald"
         android:text=""
         android:textColor="@color/pgrey"
-        android:textSize="25sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView7"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
+        app:layout_constraintVertical_bias="0.803" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

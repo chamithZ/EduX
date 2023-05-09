@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="415dp"
+        android:layout_height="276dp"
+        android:layout_marginBottom="61dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.138"
+        app:srcCompat="@mipmap/ic_launcher_top_bg_foreground" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="342dp"
+        android:layout_height="254dp"
+        android:layout_marginBottom="156dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="284dp"
+            android:layout_height="71dp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="16sp"
+            android:layout_marginRight="30sp"
+            android:background="@drawable/btn2"
+
+            android:drawableStart="@drawable/ic_baseline_auto_graph_24"
+            android:paddingStart="5sp"
+            android:paddingTop="8sp"
+            android:text="Your progress"
+            android:textAlignment="center"
+            android:textColor="@color/Pcolor"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="285dp"
+            android:layout_height="71dp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="16sp"
+            android:layout_marginRight="30sp"
+            android:background="@drawable/btn2"
+
+            android:drawableStart="@drawable/ic_baseline_logout_24"
+            android:paddingStart="5sp"
+            android:paddingTop="8sp"
+            android:text="Logout"
+            android:textAlignment="center"
+            android:textColor="@color/Pcolor"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="180dp"
+        android:layout_height="173dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_launcher_teach_home" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="70dp"
+        android:text=""
+        android:textColor="@color/pgrey"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="51dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+        app:layout_constraintVertical_bias="0.743"
+        app:srcCompat="@drawable/ic_baseline_home_24home" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

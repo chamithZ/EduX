@@ -12,8 +12,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Material3.Light.NoActionBar">
 
+
         <activity
-            android:name=".activities.sehan.QuizResultActivity"
+            android:name=".activities.supuni.AddBook"
+            android:exported="false" />
+        <activity
+            android:name=".activities.supuni.EditBook"
+            android:exported="false" />
+        <activity
+            android:name=".activities.supuni.ReadBook"
+            android:exported="false" />
+        <activity
+            android:name=".activities.chamith.StudentAccount"
+            android:exported="false" />
+        <activity
+            android:name=".activities.chamith.Std_progress"
+            android:exported="false" />
+        <activity
+            android:name=".activities.chamith.EnrollCourseview"
+            android:exported="false" />
+        <activity
+            android:name=".Enroll_courses"
             android:exported="false" />
         <activity
             android:name=".activities.chamith.SignView"
@@ -78,11 +97,27 @@
             android:name=".activities.sehan.Add_Quiz_Info"
             android:exported="false" />
         <activity
-            android:name=".activities.sehan.SingleQuizStd"
-            android:exported="false" />
-        <activity
             android:name=".activities.sehan.LoginIntro"
             android:exported="false" />
+        <activity
+            android:name=".activities.chamith.StdCourseOverview"
+            android:exported="false" />
+        <activity
+            android:name=".activities.chamith.Enroll_courses"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.hansika.AddBlog"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.hansika.ReadBlog"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.hansika.EditBlog"
+            android:exported="false" />
+
 
         <meta-data
             android:name="preloaded_fonts"
