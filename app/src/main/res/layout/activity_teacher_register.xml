@@ -19,20 +19,20 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="357dp"
-        android:layout_height="730dp"
+        android:layout_width="321dp"
+        android:layout_height="732dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
         <TextView
             android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="46dp"
+            android:layout_width="213dp"
+            android:layout_height="48dp"
             android:layout_marginLeft="75sp"
             android:layout_marginTop="20sp"
             android:layout_marginRight="75sp"
@@ -218,17 +218,18 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Tregister"
-            android:layout_width="202dp"
-            android:layout_height="60dp"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="6dp"
             android:background="@drawable/btn1"
             android:gravity="center"
             android:text="Register Now"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textColor="@color/pgrey"
 
+            android:textColor="@color/pgrey"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
