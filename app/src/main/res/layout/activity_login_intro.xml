@@ -11,19 +11,19 @@
         android:layout_width="298dp"
         android:layout_height="137dp"
         android:layout_marginStart="180dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginTop="152dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/get_started" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="393dp"
-        android:layout_height="277dp"
-        android:layout_marginBottom="524dp"
+        android:layout_width="410dp"
+        android:layout_height="295dp"
+        android:layout_marginBottom="500dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/img" />
 
@@ -89,7 +89,7 @@
 
     </LinearLayout>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Registerbtn1"
         android:layout_width="171dp"
         android:layout_height="53dp"

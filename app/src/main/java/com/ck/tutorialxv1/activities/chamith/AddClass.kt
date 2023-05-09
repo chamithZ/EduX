@@ -1,9 +1,11 @@
 package com.ck.tutorialxv1.activities.chamith
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.ck.tutorialxv1.R
+import com.ck.tutorialxv1.activities.sehan.getStart
 import com.ck.tutorialxv1.models.courseModel
 import com.ck.tutorialxv1.databinding.ActivityAddClassBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -69,12 +71,14 @@ class AddClass : AppCompatActivity() {
             val course = courseModel(courseId, subject, grade, zoomLink, date, time, getUserId())
             db.child(courseId).setValue(course)
                 .addOnCompleteListener {
-                    Toast.makeText(this, "Data inserted successfully", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Course added successfully", Toast.LENGTH_LONG).show()
                     binding.subjectTv.setText("")
                     binding.gradeTV.setText("")
                     binding.ZoomLinkTv.setText("")
                     binding.dateTv.setText("")
                     binding.timeTv.setText("")
+                    val intent= Intent(this, FetchingCourse::class.java)
+                    startActivity(intent)
                 }.addOnFailureListener { err ->
                     Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
                 }

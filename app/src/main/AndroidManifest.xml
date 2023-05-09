@@ -107,6 +107,9 @@
             android:name=".activities.hansika.EditBlog"
             android:exported="false" />
 
+        <activity
+            android:name=".activities.sehan.getStart"
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"
