@@ -36,6 +36,10 @@
             android:name=".activities.chamith.SignView"
             android:exported="false" />
         <activity
+            android:name=".activities.chamith.Enroll_courses"
+            android:exported="false" />
+
+        <activity
             android:name=".activities.sehan.ViewAllQuiz"
             android:exported="false" />
         <activity

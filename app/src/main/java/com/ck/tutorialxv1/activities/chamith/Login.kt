@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.Toast
 import com.ck.tutorialxv1.R
 import com.ck.tutorialxv1.activities.register
+import com.ck.tutorialxv1.activities.sehan.getStart
 import com.ck.tutorialxv1.databinding.ActivityLoginBinding
 import com.ck.tutorialxv1.models.chamith.UserModel
 import com.google.firebase.auth.FirebaseAuth
@@ -32,6 +33,10 @@ class login : AppCompatActivity() {
 
         binding.textView4.setOnClickListener {
             val intent= Intent(this, SignView::class.java)
+            startActivity(intent)
+        }
+        binding.textView2 .setOnClickListener{
+            val intent= Intent(this, getStart::class.java)
             startActivity(intent)
         }
 
@@ -80,7 +85,6 @@ class login : AppCompatActivity() {
                                 // Save user data and login status to SharedPreferences
                                 if (user?.grade == null) {
                                     // User is a teacher
-                                    System.out.println("tewahcerrrrrr")
                                     val editor = sharedPreferences.edit()
                                     editor.putString("userId", userId)
                                     editor.putString("email", email)
