@@ -62,13 +62,13 @@ class ViewAllQuizStd : AppCompatActivity() {
 
                     mAdapter.setOnItemClickListener(object : quizAdaptor.onItemClickListener{
                         override fun onItemClick(position: Int) {
-                            val intent = Intent(this@ViewAllQuizStd, View_Quiz_Details::class.java)
+                            val intent = Intent(this@ViewAllQuizStd, SingleQuizStd::class.java)
 
                             intent.putExtra("id",quizList[position].id)
                             intent.putExtra("title",quizList[position].title)
                             intent.putExtra("grade",quizList[position].grade)
                             intent.putExtra("course",quizList[position].course)
-                            intent.putExtra("QuestionList",ArrayList(quizList[position].questions))
+                           // intent.putExtra("QuestionList",quizList[position].questions)
                             startActivity(intent)
 
                         }

@@ -15,10 +15,7 @@
 
         <activity
             android:name=".activities.supuni.AddBook"
-
-            android:exported="false">
-
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".activities.supuni.EditBook"
             android:exported="false" />
@@ -34,15 +31,17 @@
         <activity
             android:name=".activities.chamith.EnrollCourseview"
             android:exported="false" />
-        <activity
-            android:name=".activities.chamith.Enroll_courses"
-            android:exported="false" />
+
         <activity
             android:name=".activities.chamith.SignView"
             android:exported="false" />
         <activity
             android:name=".activities.sehan.ViewAllQuiz"
             android:exported="false" />
+        <activity
+            android:name=".activities.sehan.QuizResultActivity"
+            android:exported="false" />
+
         <activity
             android:name=".activities.sehan.ViewAllQuizStd"
             android:exported="false" />
@@ -103,9 +102,14 @@
             android:name=".activities.sehan.LoginIntro"
             android:exported="false" />
         <activity
+            android:name=".activities.sehan.SingleQuizStd"
+            android:exported="false" />
+        <activity
             android:name=".activities.chamith.StdCourseOverview"
             android:exported="false" />
-
+        <activity
+            android:name=".activities.chamith.Enroll_courses"
+            android:exported="false" />
 
         <activity
             android:name=".activities.hansika.AddBlog"
@@ -117,10 +121,6 @@
 
         <activity
             android:name=".activities.hansika.EditBlog"
-            android:exported="false" />
-
-        <activity
-            android:name=".activities.sehan.getStart"
             android:exported="false" />
 
 
