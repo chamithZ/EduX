@@ -95,6 +95,19 @@
             android:name=".activities.chamith.Enroll_courses"
             android:exported="false" />
 
+        <activity
+            android:name=".activities.hansika.AddBlog"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.hansika.ReadBlog"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.hansika.EditBlog"
+            android:exported="false" />
+
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

@@ -22,8 +22,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout5"
-        android:layout_width="331dp"
-        android:layout_height="297dp"
+        android:layout_width="322dp"
+        android:layout_height="358dp"
         android:layout_marginBottom="60dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -82,6 +82,40 @@
             android:textColor="@color/Pcolor"
             android:textSize="24sp" />
 
+        <TextView
+            android:id="@+id/addblog"
+            android:layout_width="281dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="16sp"
+            android:layout_marginRight="30sp"
+            android:background="@drawable/btn2"
+
+            android:drawableStart="@drawable/ic_baseline_post_add_24pp"
+            android:paddingStart="5sp"
+            android:paddingTop="5sp"
+            android:text="Add blog"
+            android:textAlignment="center"
+            android:textColor="@color/Pcolor"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/viewBlog"
+            android:layout_width="281dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="16sp"
+            android:layout_marginRight="30sp"
+            android:background="@drawable/btn2"
+
+            android:drawableStart="@drawable/ic_baseline_bookmarks_24book"
+            android:paddingStart="5sp"
+            android:paddingTop="5sp"
+            android:text="View blog"
+            android:textAlignment="center"
+            android:textColor="@color/Pcolor"
+            android:textSize="24sp" />
+
 
         <TextView
             android:id="@+id/Saccount"
@@ -106,11 +140,12 @@
         android:id="@+id/imageView7"
         android:layout_width="218dp"
         android:layout_height="168dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/get_started"/>
+        app:srcCompat="@drawable/get_started" />
 
     <TextView
         android:id="@+id/user_name"
