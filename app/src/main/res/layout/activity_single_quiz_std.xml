@@ -62,24 +62,13 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/register_button"
         android:text="@string/Next"
         android:textColor="#FEFEFE"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/option02" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/register_button"
-        android:text="@string/PREVIOUS"
-        android:textColor="#FEFEFE"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/option02" />
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -95,45 +84,47 @@
         />
 
     <Button
-        android:id="@+id/Option01"
+        android:id="@+id/opt01"
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="24dp"
         android:text="Option 01"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
     <Button
-        android:id="@+id/option03"
+        android:id="@+id/opt02"
         android:layout_width="360dp"
         android:layout_height="50dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="27dp"
         android:text="Option 02"
-        app:layout_constraintEnd_toEndOf="@+id/option02"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/option02"
-        app:layout_constraintTop_toBottomOf="@+id/Option01" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opt01" />
 
     <Button
-        android:id="@+id/option04"
+        android:id="@+id/opt03"
         android:layout_width="360dp"
         android:layout_height="50dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
         android:text="Option 03"
-        app:layout_constraintEnd_toEndOf="@+id/option03"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/option03"
-        app:layout_constraintTop_toBottomOf="@+id/option03" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opt02" />
 
     <Button
-        android:id="@+id/option02"
+        android:id="@+id/opt04"
         android:layout_width="360dp"
         android:layout_height="50dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="4dp"
         android:text="Option 04"
-        app:layout_constraintEnd_toEndOf="@+id/Option01"
-        app:layout_constraintTop_toBottomOf="@+id/option04" />
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

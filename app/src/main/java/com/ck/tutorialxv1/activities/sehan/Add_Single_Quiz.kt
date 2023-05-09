@@ -1,11 +1,13 @@
 package com.ck.tutorialxv1.activities.sehan
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.ck.tutorialxv1.R
+import com.ck.tutorialxv1.activities.chamith.MainActivity
 import com.ck.tutorialxv1.models.Question
 import com.ck.tutorialxv1.models.sehan.Quiz
 
@@ -53,11 +55,12 @@ class Add_Single_Quiz : AppCompatActivity() {
 
         nextBtn.setOnClickListener {
                 saveSingleQuestions()
-
         }
         doneBtn.setOnClickListener {
             saveSingleQuestions()
             saveQuizData()
+            var intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
         }
 
     }
@@ -77,7 +80,7 @@ class Add_Single_Quiz : AppCompatActivity() {
             icorrectOp.error ="Please enter the Correct Answer"
         }
 
-        val question = Question(TopQuestion,correctOp,op01,op02,op03,op04)
+        val question = Question(TopQuestion,op01,op02,op03,op04,correctOp)
         quizList.add(question)
 
         iQuestion.text.clear()
@@ -97,7 +100,7 @@ class Add_Single_Quiz : AppCompatActivity() {
 
         val quizId = dbRef.push().key!!
 
-        val quiz = Quiz(quizId,QuizName,Grade,Course,quizList)
+        val quiz = Quiz(quizId,intent.getStringExtra("userID").toString(),QuizName,Grade,Course,quizList)
 
         dbRef.child(quizId).setValue(quiz)
             .addOnCompleteListener {

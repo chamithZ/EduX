@@ -22,12 +22,12 @@
 
     <LinearLayout
         android:id="@+id/linearLayout5"
-        android:layout_width="347dp"
-        android:layout_height="352dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="52dp"
+        android:layout_width="345dp"
+        android:layout_height="304dp"
+        android:layout_marginBottom="24dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
@@ -102,9 +102,10 @@
         android:id="@+id/imageView7"
         android:layout_width="218dp"
         android:layout_height="168dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="112dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_launcher_learn_foreground" />
 
@@ -122,7 +123,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
-
 
 
 

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import com.ck.tutorialxv1.R
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 
 class Add_Quiz_Info : AppCompatActivity() {
@@ -36,7 +37,14 @@ class Add_Quiz_Info : AppCompatActivity() {
             intent.putExtra("itNoOfQuiz",itNoOfQuiz.text.toString())
             intent.putExtra("itGrade",itGrade.text.toString())
             intent.putExtra("itQuizCourse",itQuizCourse.text.toString())
+            intent.putExtra("userID",getUserId())
             startActivity(intent)
         }
+
+
+    }
+    private fun getUserId(): String {
+        val userId = FirebaseAuth.getInstance().currentUser?.uid
+        return userId ?: ""
     }
 }
