@@ -9,6 +9,7 @@ import com.ck.tutorialxv1.activities.sehan.Add_Quiz_Info
 import com.ck.tutorialxv1.activities.sehan.ViewAllQuiz
 import com.ck.tutorialxv1.activities.teacherAccount
 import com.ck.tutorialxv1.databinding.ActivityMainBinding
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -30,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, FetchingCourse::class.java)
             startActivity(intent)
         }
-        binding.account .setOnClickListener {
+        binding.account.setOnClickListener {
             val intent = Intent(this, teacherAccount::class.java)
             startActivity(intent)
         }
@@ -43,12 +44,20 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val userName = sharedPreferences.getString("name","")
-
+        val userName = sharedPreferences.getString("name", "")
         System.out.println(userName)
-
         if (!userName.isNullOrEmpty()) {
-            binding.userName.text = "  $userName!"
+            val currentTime =
+                Calendar.getInstance().apply { timeInMillis = System.currentTimeMillis() }
+            val currentHour = currentTime.get(Calendar.HOUR_OF_DAY)
+
+            val greeting = when (currentHour) {
+                in 6..11 -> "Good morning,"
+                in 12..16 -> "Good afternoon,"
+                else -> "Good evening,"
+            }
+
+            binding.userName .text = " $greeting $userName!"
         }
     }
 }

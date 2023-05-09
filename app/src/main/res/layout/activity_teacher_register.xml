@@ -167,7 +167,7 @@
                     android:backgroundTint="#C4E0E0E0"
                     android:ems="10"
                     android:hint="Qualification"
-                    android:inputType="numberSigned|number"
+                    android:inputType="text"
                     android:paddingLeft="10sp" />
 
                 <EditText
@@ -197,7 +197,7 @@
                     android:backgroundTint="#C4E0E0E0"
                     android:ems="10"
                     android:hint="Branch of the bank"
-                    android:inputType="numberSigned|number"
+                    android:inputType="text"
                     android:paddingLeft="10sp" />
 
 

@@ -10,7 +10,6 @@ import com.ck.tutorialxv1.databinding.ActivityCourseFetchBinding
 import com.ck.tutorialxv1.models.courseModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
-
 class FetchingAllCourse : AppCompatActivity() {
 
     private lateinit var courseList: ArrayList<courseModel>
@@ -35,51 +34,60 @@ class FetchingAllCourse : AppCompatActivity() {
     }
 
     private fun getCourseData() {
+
+
         binding.rvCourse.visibility = View.GONE
         binding.tvLoadingData.visibility = View.VISIBLE
 
         db = FirebaseDatabase.getInstance().getReference("course")
 
         db.addValueEventListener(object : ValueEventListener {
-                override fun onDataChange(snapshot: DataSnapshot) {
-                    courseList.clear()
-                    if (snapshot.exists()) {
-                        for (courseSnap in snapshot.children) {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                courseList.clear()
+                if (snapshot.exists()) {
+                    for (courseSnap in snapshot.children) {
+                        // check if the data is not null
+                        if (courseSnap.value != null) {
                             val courseData = courseSnap.getValue(courseModel::class.java)
-                            courseList.add(courseData!!)
-                        }
-                        val mAdapter = CourseAdapter(courseList)
-                        binding.rvCourse.adapter = mAdapter
-
-                        mAdapter.setOnClickListener(object : CourseAdapter.onItemClickListener {
-                            override fun onItemClick(position: Int) {
-
-                                val intent = Intent(
-                                    this@FetchingAllCourse,
-                                    CourseDetailsActivity::class.java
-                                )
-                                intent.putExtra("courseId", courseList[position].courseId)
-                                intent.putExtra("subject", courseList[position].subject)
-                                intent.putExtra("grade", courseList[position].grade)
-                                intent.putExtra("time", courseList[position].time)
-                                intent.putExtra("date", courseList[position].date)
-                                intent.putExtra("zoomLink", courseList[position].zoomLink)
-                                startActivity(intent)
-
+                            // check if the courseData is not null
+                            if (courseData != null) {
+                                courseList.add(courseData)
                             }
-
-                        })
-
-                        binding.rvCourse.visibility = View.VISIBLE
-                        binding.tvLoadingData.visibility = View.GONE
+                        }
                     }
-                }
+                    val mAdapter = CourseAdapter(courseList)
+                    binding.rvCourse.adapter = mAdapter
 
-                override fun onCancelled(error: DatabaseError) {
-                    // Handle error
-                }
+                    mAdapter.setOnClickListener(object : CourseAdapter.onItemClickListener {
+                        override fun onItemClick(position: Int) {
 
-            })
+                            val intent = Intent(
+                                this@FetchingAllCourse,
+                                StdCourseOverview::class.java
+                            )
+                            intent.putExtra("courseId", courseList[position].courseId)
+                            intent.putExtra("subject", courseList[position].subject)
+                            intent.putExtra("grade", courseList[position].grade)
+                            intent.putExtra("time", courseList[position].time)
+                            intent.putExtra("date", courseList[position].date)
+                            intent.putExtra("zoomLink", courseList[position].zoomLink)
+                            intent.putExtra("userId",courseList[position].userId)
+                            startActivity(intent)
+
+                        }
+
+                    })
+
+                    binding.rvCourse.visibility = View.VISIBLE
+                    binding.tvLoadingData.visibility = View.GONE
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                // Handle error
+            }
+
+        })
 
     }
 }

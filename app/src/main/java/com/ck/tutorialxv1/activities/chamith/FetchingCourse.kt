@@ -53,7 +53,6 @@ class FetchingCourse : AppCompatActivity() {
 
                         mAdapter.setOnClickListener(object : CourseAdapter.onItemClickListener {
                             override fun onItemClick(position: Int) {
-
                                 val intent = Intent(
                                     this@FetchingCourse,
                                     CourseDetailsActivity::class.java
@@ -65,16 +64,17 @@ class FetchingCourse : AppCompatActivity() {
                                 intent.putExtra("date", courseList[position].date)
                                 intent.putExtra("zoomLink", courseList[position].zoomLink)
                                 startActivity(intent)
-
                             }
-
                         })
 
                         binding.rvCourse.visibility = View.VISIBLE
                         binding.tvLoadingData.visibility = View.GONE
+                    } else {
+                        binding.rvCourse.visibility = View.GONE
+                        binding.tvLoadingData.visibility = View.VISIBLE
+                        binding.tvLoadingData.text = "No courses available to show. please add acourse first!"
                     }
                 }
-
                 override fun onCancelled(error: DatabaseError) {
                     // Handle error
                 }

@@ -36,7 +36,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
 
-
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="304dp"
@@ -45,6 +44,7 @@
         android:layout_marginBottom="25dp"
         android:background="@drawable/btn2"
 
+        android:drawableStart="@drawable/ic_baseline_account_box_24"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
@@ -64,6 +64,7 @@
         android:layout_marginBottom="60dp"
 
         android:background="@drawable/btn2"
+        android:drawableStart="@drawable/ic_baseline_security_24"
         android:ems="10"
         android:hint="password"
         android:inputType="textPassword"
