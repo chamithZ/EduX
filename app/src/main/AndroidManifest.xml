@@ -111,9 +111,6 @@
         <activity
             android:name=".activities.chamith.StdCourseOverview"
             android:exported="false" />
-        <activity
-            android:name=".activities.chamith.Enroll_courses"
-            android:exported="false" />
 
         <activity
             android:name=".activities.hansika.AddBlog"
